@@ -1,0 +1,144 @@
+*,
+*:after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: flex;
+  object-fit: cover;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 307px;
+  padding: 48px;
+  color: #ffffff;
+  position: relative;
+}
+
+.card--sedan {
+  background-color: #e38826;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.card--sedan::before {
+  content: "";
+  background-image: url(../images/sedans.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 64px;
+  height: 40px;
+  margin-bottom: 35px;
+}
+
+.card--suvs {
+  background-color: #006970;
+}
+
+.card--suvs::before {
+  content: "";
+  background-image: url(../images/suvs.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 64px;
+  height: 40px;
+  margin-bottom: 35px;
+}
+
+.card--luxury {
+  background-color: #004241;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.card--luxury::before {
+  content: "";
+  background-image: url(../images/luxury.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 64px;
+  height: 40px;
+  margin-bottom: 35px;
+}
+
+.card__title {
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+/* Описание */
+.card__description {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  line-height: 1.6;
+  opacity: 75%;
+  color: #ffffff;
+  margin-bottom: 83px;
+}
+
+/* Кнопка */
+.card__button {
+  align-self: flex-start;
+  padding: 12px 24px;
+  background-color: white;
+  color: #e28625;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card__button:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
